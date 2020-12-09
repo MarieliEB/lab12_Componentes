@@ -1,0 +1,16 @@
+type Vehicule {
+	id:ID!,
+	type: String,
+	modelCode: String,
+	brandName: String,
+	launchDate: String
+}
+
+type Query {
+	vehicules(count: Int):[Vehicule]
+	vehicule(id: ID):Vehicule
+}
+
+type Mutation {
+	createVehicule(type: String!, modelCode: String!, brandName: String, launchDate: String):Vehicule
+}
